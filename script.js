@@ -1,60 +1,36 @@
-// ===== Mobile hamburger menu toggle =====
-const hamburger = document.getElementById('hamburger');
-const menu = document.querySelector('.menu');
+// script.js for portfolio website
+// Hamburger menu functionality for responsive navigation
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-if (hamburger && menu) {
-  hamburger.addEventListener('click', function () {
-    const hamIcon = this.querySelector('.hamburger-icon');
-    const crossIcon = this.querySelector('.cross-icon');
-
-    const isOpen = menu.style.display === 'block';
-    menu.style.display = isOpen ? 'none' : 'block';
-
-    if (hamIcon) hamIcon.style.display = isOpen ? 'inline-block' : 'none';
-    if (crossIcon) crossIcon.style.display = isOpen ? 'none' : 'inline-block';
-  });
-
-  // Close menu when a nav link is clicked
-  document.querySelectorAll('.links').forEach(link => {
-    link.addEventListener('click', () => {
-      const hamIcon = hamburger.querySelector('.hamburger-icon');
-      const crossIcon = hamburger.querySelector('.cross-icon');
-      menu.style.display = 'none';
-      if (hamIcon) hamIcon.style.display = 'inline-block';
-      if (crossIcon) crossIcon.style.display = 'none';
-    });
-  });
-}
-
-// ===== Smooth scroll for in-page anchor links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' }); // smooth anchor jump
-    }
-  });
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('open');
 });
 
-// ===== Back to Home (scroll-to-top) button =====
-const backBtn = document.getElementById('backToTop');
-const showAfter = 240; // px threshold before showing button
+// Certification Image Modal
+function openCertificate(imgSrc) {
+  const modal = document.getElementById('certModal');
+  const certImage = document.getElementById('certImage');
+  modal.style.display = 'block';
+  certImage.src = imgSrc;
+}
 
-function onScroll() {
-  const y = window.scrollY || document.documentElement.scrollTop;
-  if (!backBtn) return;
-  if (y > showAfter) {
-    backBtn.classList.add('show');
-  } else {
-    backBtn.classList.remove('show');
+const closeModal = document.querySelector('.close');
+closeModal.onclick = function() {
+    document.getElementById('certModal').style.display = 'none';
+};
+
+window.onclick = function(event) {
+  const modal = document.getElementById('certModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
   }
-}
-window.addEventListener('scroll', onScroll, { passive: true });
+};
 
-if (backBtn) {
-  backBtn.addEventListener('click', () => {
-    // Smoothly scroll to the very top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+// Simple form submission (no backend)
+document.getElementById('contactForm').onsubmit = function(e) {
+    e.preventDefault();
+    alert('Your message has been sent!');
+    this.reset();
+};
