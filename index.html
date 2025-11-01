@@ -12,7 +12,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo"><a href="#home">Portfolio</a></div>
+      <a class="nav-logo" href="#home">Portfolio</a>
       <div class="nav-menu">
         <a class="nav-link" href="#home">Home</a>
         <a class="nav-link" href="#experience">Experience</a>
@@ -27,37 +27,23 @@
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="profile-image">
-        <img src="profile.jpg" alt="Profile"/>
-      </div>
-      <div class="profile-info">
-        <h1 class="name">Your Name</h1>
-        <p class="profession">AI & Machine Learning Developer</p>
-
-        <!-- Social icons with motion (all icons) -->
-        <div class="social-links">
-          <a class="social social-bounce" href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a class="social social-bounce" href="mailto:your.email@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a class="social social-bounce" href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a class="social social-bounce" href="https://twitter.com/yourusername" target="_blank" aria-label="X/Twitter">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          <!-- New: WhatsApp -->
-          <a class="social social-bounce" href="https://wa.me/911234567890" target="_blank" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <!-- New: Instagram -->
-          <a class="social social-bounce" href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+  <section id="home" class="hero section">
+    <div class="container">
+      <div class="hero-row">
+        <div class="profile-image">
+          <img src="profile.jpg" alt="Profile"/>
+        </div>
+        <div class="profile-info">
+          <h1 class="name">Your Name</h1>
+          <p class="profession">AI & Machine Learning Developer</p>
+          <div class="social-links">
+            <a class="social" href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social" href="mailto:your.email@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a class="social" href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="social" href="https://twitter.com/yourusername" target="_blank" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a class="social" href="https://wa.me/911234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a class="social" href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -118,23 +104,23 @@
     <div class="container">
       <h2 class="section-title">Certifications</h2>
       <div class="cert-grid">
-        <div class="cert-card" data-cert="cert1.jpg">
+        <div class="cert-card" data-cert="cert1.jpg" role="button" tabindex="0">
           <i class="fas fa-certificate"></i>
           <h3>Python Programming</h3>
           <p>Certified Python Developer</p>
-          <span class="view-cert">Click to view certificate</span>
+          <span class="view-cert">Open certificate</span>
         </div>
-        <div class="cert-card" data-cert="cert2.jpg">
+        <div class="cert-card" data-cert="cert2.jpg" role="button" tabindex="0">
           <i class="fas fa-brain"></i>
           <h3>Machine Learning</h3>
           <p>ML Specialist Certification</p>
-          <span class="view-cert">Click to view certificate</span>
+          <span class="view-cert">Open certificate</span>
         </div>
-        <div class="cert-card" data-cert="cert3.jpg">
+        <div class="cert-card" data-cert="cert3.jpg" role="button" tabindex="0">
           <i class="fas fa-robot"></i>
           <h3>AI & Deep Learning</h3>
           <p>AI Professional Certificate</p>
-          <span class="view-cert">Click to view certificate</span>
+          <span class="view-cert">Open certificate</span>
         </div>
       </div>
     </div>
@@ -147,7 +133,7 @@
       <div class="skills-container">
         <div>
           <h3>Programming</h3>
-          <div>
+          <div class="tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">HTML/CSS</span>
@@ -156,7 +142,7 @@
         </div>
         <div>
           <h3>AI/ML</h3>
-          <div>
+          <div class="tags">
             <span class="skill-tag">TensorFlow</span>
             <span class="skill-tag">PyTorch</span>
             <span class="skill-tag">OpenCV</span>
@@ -166,7 +152,7 @@
         </div>
         <div>
           <h3>Tools</h3>
-          <div>
+          <div class="tags">
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Git</span>
             <span class="skill-tag">Streamlit</span>
@@ -188,7 +174,7 @@
           <div class="project-content">
             <h3>Yoga Pose Detection</h3>
             <p>Computer-vision model to detect and classify yoga poses from images/video.</p>
-            <div class="project-tech">
+            <div class="project-tech tags">
               <span>Python</span><span>YOLO</span><span>OpenCV</span>
             </div>
             <a class="project-link" target="_blank" href="https://github.com/yourusername/yoga-pose-detection">
@@ -202,7 +188,7 @@
           <div class="project-content">
             <h3>Currency Detection System</h3>
             <p>Automated denomination detection and counting with a simple UI.</p>
-            <div class="project-tech">
+            <div class="project-tech tags">
               <span>Python</span><span>TensorFlow</span><span>Streamlit</span>
             </div>
             <a class="project-link" target="_blank" href="https://github.com/yourusername/currency-detection">
@@ -216,7 +202,7 @@
           <div class="project-content">
             <h3>Document QA System</h3>
             <p>End-to-end document understanding and question answering pipeline.</p>
-            <div class="project-tech">
+            <div class="project-tech tags">
               <span>Python</span><span>LangChain</span><span>LLM</span>
             </div>
             <a class="project-link" target="_blank" href="https://github.com/yourusername/document-qa">
@@ -270,7 +256,7 @@
             <input type="text" name="name" placeholder="Your Name" required/>
             <input type="email" name="email" placeholder="Your Email" required/>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
       </div>
