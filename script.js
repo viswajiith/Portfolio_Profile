@@ -1,36 +1,45 @@
-// script.js for portfolio website
-// Hamburger menu functionality for responsive navigation
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  hamburger.classList.toggle('open');
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id && id.length > 1) {
+      e.preventDefault();
+      const el = document.querySelector(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
 
-// Certification Image Modal
-function openCertificate(imgSrc) {
-  const modal = document.getElementById('certModal');
-  const certImage = document.getElementById('certImage');
-  modal.style.display = 'block';
-  certImage.src = imgSrc;
+// Cert modal
+const modal = document.getElementById('certModal');
+const certImg = document.getElementById('certImage');
+const closeBtn = document.querySelector('.close');
+
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const src = card.getAttribute('data-cert');
+    certImg.src = src;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  certImg.src = '';
+  document.body.style.overflow = 'auto';
 }
 
-const closeModal = document.querySelector('.close');
-closeModal.onclick = function() {
-    document.getElementById('certModal').style.display = 'none';
-};
+if (closeBtn) closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-window.onclick = function(event) {
-  const modal = document.getElementById('certModal');
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-};
-
-// Simple form submission (no backend)
-document.getElementById('contactForm').onsubmit = function(e) {
+// Contact form (frontend only)
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Your message has been sent!');
-    this.reset();
-};
+    alert('Thanks! Your message has been sent.');
+    form.reset();
+  });
+}
