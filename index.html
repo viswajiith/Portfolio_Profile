@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Portfolio | VISWAJITH S</title>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="responsive.css"/>
 </head>
 <body>
-  <!-- Page background -->
+  <!-- Background layers -->
   <div class="bg-overlay"></div>
+  <div class="bg-orbs">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+  </div>
 
-  <!-- Navbar header section -->
+  <!-- Navbar -->
   <header class="header glass-nav">
     <nav class="navbar">
       <div class="logo">
@@ -31,137 +36,225 @@
       <div class="menu">
         <ul class="menu-list">
           <li class="menu-list-items"><a class="links" href="#home">Home</a></li>
-          <li class="menu-list-items"><a class="links" href="#portfolio">Portfolio</a></li>
-          <li class="menu-list-items"><a class="links" href="#about">About</a></li>
-          <li class="menu-list-items"><a class="links" href="#services">Services</a></li>
+          <li class="menu-list-items"><a class="links" href="#summary">Summary</a></li>
+          <li class="menu-list-items"><a class="links" href="#skills">Skills</a></li>
+          <li class="menu-list-items"><a class="links" href="#experience">Experience</a></li>
+          <li class="menu-list-items"><a class="links" href="#education">Education</a></li>
+          <li class="menu-list-items"><a class="links" href="#certifications">Certifications</a></li>
+          <li class="menu-list-items"><a class="links" href="#portfolio">Projects</a></li>
+          <li class="menu-list-items"><a class="links" href="#personal">Personal</a></li>
           <li class="menu-list-items"><a class="links" href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Main hero banner -->
+  <!-- Hero -->
   <section id="home" class="hero">
-    <div class="intro glass-card">
+    <div class="intro glass-card hero-card float-elevate">
+      <div class="badge-row">
+        <span class="badge"><i class="fa-solid fa-robot"></i> AI & CV</span>
+        <span class="badge"><i class="fa-solid fa-code"></i> Python</span>
+        <span class="badge"><i class="fa-solid fa-bolt"></i> Real-time</span>
+      </div>
       <div class="headings">
         <h3 class="greet-heading">Hello, I'm</h3>
-        <h1 class="my-heading">Your Name</h1>
-        <h4 class="sub-heading">AI & ML Developer with expertise in Python</h4>
+        <h1 class="my-heading gradient-text">VISWAJITH S</h1>
+        <h4 class="sub-heading">AI & ML Developer • Computer Vision • Python</h4>
       </div>
       <div class="intro-buttons">
-        <a class="btn common-btn" href="#contact">Hire Me</a>
-        <a class="btn ghost-btn" href="resume.pdf" target="_blank" rel="noopener">Get Resume</a>
+        <a class="btn cta-btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+        <a class="btn ghost-btn" href="resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Resume</a>
+      </div>
+      <ul class="quick-info">
+        <li><i class="fa-solid fa-location-dot"></i> Kerala, India</li>
+        <li><i class="fa-solid fa-envelope"></i> your.email@gmail.com</li>
+        <li><i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Career Summary -->
+  <section id="summary" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Career Summary</h2>
+      <p>
+        BCA graduate specialized in AI & Robotics focused on computer vision and ML in Python, shipping practical apps end-to-end from dataset curation to deployment.
+      </p>
+      <p>
+        Built yoga pose detection, currency counting with YOLO, and document QA; known for rapid prototyping, clean architecture, and measurable outcomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>AI/ML</h3>
+          <ul>
+            <li>Scikit-learn, TensorFlow, OpenCV</li>
+            <li>YOLO (detection)</li>
+            <li>Data prep, eval, inference</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>Web/Tools</h3>
+          <ul>
+            <li>Flask, Streamlit</li><li>HTML, CSS, React basics</li><li>Git, VS Code, Colab</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Problem solving</li><li>Analytical thinking</li><li>Client training</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bars">
+        <div class="bar"><span>Python</span><div class="track"><div class="fill" style="--p:92%"></div></div></div>
+        <div class="bar"><span>Computer Vision</span><div class="track"><div class="fill" style="--p:87%"></div></div></div>
+        <div class="bar"><span>Machine Learning</span><div class="track"><div class="fill" style="--p:82%"></div></div></div>
+        <div class="bar"><span>JavaScript</span><div class="track"><div class="fill" style="--p:65%"></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
+  <!-- Experience -->
+  <section id="experience" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <div class="time">2025</div>
+          <div class="content">
+            <h3>AI Developer — Yoga Pose Detection</h3>
+            <ul>
+              <li>Real-time multi-class classification; curated dataset, training pipeline, metrics dashboard.</li>
+              <li>Interactive demo with webcam and visual feedback for predictions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div class="time">2025</div>
+          <div class="content">
+            <h3>CV Engineer — Currency Detection & Counter</h3>
+            <ul>
+              <li>YOLO-based denomination detection; auto-sum and post-processing for stability.</li>
+              <li>Packaged a desktop-style UI for on-device demos and testing.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div class="time">2024</div>
+          <div class="content">
+            <h3>AI Trainer — Banking Professionals</h3>
+            <ul>
+              <li>Job-centric training on prompt design, automation, and data care.</li>
+              <li>Hands-on labs tailored to banking workflows.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <ul class="kv">
+        <li><span>BCA (AI & Robotics)</span><span>Year — College/University</span></li>
+        <li><span>Coursework</span><span>ML, CV, Data Structures, DBMS, Web Dev</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h2>
+      <ul class="bullets">
+        <li>Google UX Design Professional Certificate</li>
+        <li>TensorFlow Developer Certificate</li>
+        <li>IBM Machine Learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="portfolio section-wrap" id="portfolio">
     <div class="portfolio-heading">
-      <h1 class="my-heading text-center">Featured Projects</h1>
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Featured Projects</h2>
     </div>
     <div class="portfolio-content">
       <div class="my-row">
         <div class="my-col">
           <div class="my-card port-card glass-card float-elevate">
-            <div class="image">
-              <img src="./Images/project1.jpg" alt="Project 1">
-            </div>
-            <h3 class="greet-heading blue-text">Project Name 1</h3>
-            <p class="small-para blue-text">Description</p>
+            <div class="image"><img src="./Images/project1.jpg" alt="Project 1"></div>
+            <h3 class="greet-heading blue-text">Yoga Pose Classifier</h3>
+            <p class="small-para blue-text">Real-time pose recognition with metrics and webcam UI.</p>
           </div>
         </div>
-
         <div class="my-col">
           <div class="my-card port-card glass-card float-elevate">
-            <div class="image">
-              <img src="./Images/project2.jpg" alt="Project 2">
-            </div>
-            <h3 class="greet-heading blue-text">Project Name 2</h3>
-            <p class="small-para blue-text">Description</p>
+            <div class="image"><img src="./Images/project2.jpg" alt="Project 2"></div>
+            <h3 class="greet-heading blue-text">Currency Counter</h3>
+            <p class="small-para blue-text">YOLO-based denomination detection and automatic totaling.</p>
           </div>
         </div>
-
         <div class="my-col">
           <div class="my-card port-card glass-card float-elevate">
-            <div class="image">
-              <img src="./Images/project3.jpg" alt="Project 3">
-            </div>
-            <h3 class="greet-heading blue-text">Project Name 3</h3>
-            <p class="small-para blue-text">Description</p>
+            <div class="image"><img src="./Images/project3.jpg" alt="Project 3"></div>
+            <h3 class="greet-heading blue-text">Doc QA System</h3>
+            <p class="small-para blue-text">RAG-based PDF QA with search and answer validation.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-text glass-card float-elevate">
-      <h1 class="my-heading">About Me</h1>
-      <p class="lead-para">
-        BCA graduate with specialization in AI and Robotics. Passionate about machine learning, computer vision, and building intelligent applications.
-      </p>
-      <p>
-        Dedicated to continuous learning and creating impactful projects that demonstrate technical expertise and problem-solving abilities.
-      </p>
-    </div>
-    <div class="about-image glass-card float-elevate">
-      <img src="./Images/about.jpg" alt="About Image">
+  <!-- Personal Info -->
+  <section id="personal" class="section-wrap">
+    <div class="glass-card float-elevate pad">
+      <h2 class="section-title"><i class="fa-solid fa-id-card"></i> Personal Info</h2>
+      <ul class="kv">
+        <li><span>Full Name</span><span>VISWAJITH S</span></li>
+        <li><span>Location</span><span>Kerala, India</span></li>
+        <li><span>Email</span><span>your.email@gmail.com</span></li>
+        <li><span>Phone</span><span>+91 XXXXX XXXXX</span></li>
+        <li><span>Portfolio</span><span>yourdomain.com</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <div class="services-heading">
-      <h1 class="my-heading text-center">My Services</h1>
-    </div>
-    <div class="services-content">
-      <div class="my-row">
-        <div class="my-col">
-          <div class="my-card glass-card float-elevate">
-            <div class="icon"><i class="fas fa-brain"></i></div>
-            <h3 class="greet-heading blue-text">AI Development</h3>
-            <p class="small-para">Building intelligent AI systems and machine learning models for real-world applications.</p>
-          </div>
-        </div>
-        <div class="my-col">
-          <div class="my-card glass-card float-elevate">
-            <div class="icon"><i class="fas fa-code"></i></div>
-            <h3 class="greet-heading blue-text">Web Development</h3>
-            <p class="small-para">Creating responsive, interactive web apps using Python, JavaScript and modern frameworks.</p>
-          </div>
-        </div>
-        <div class="my-col">
-          <div class="my-card glass-card float-elevate">
-            <div class="icon"><i class="fas fa-robot"></i></div>
-            <h3 class="greet-heading blue-text">Computer Vision</h3>
-            <p class="small-para">Implementing image recognition and object detection solutions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact me section -->
-  <section class="contact" id="contact">
+  <!-- Contact -->
+  <section class="contact section-wrap" id="contact">
     <div class="contact-heading">
-      <h1 class="my-heading text-center">Contact Me</h1>
+      <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> Contact Me</h2>
     </div>
     <div class="contact-content">
       <div class="contact-form-container glass-card float-elevate">
-        <h1 class="greet-heading">Get In Touch</h1>
+        <h3 class="greet-heading">Get In Touch</h3>
         <form class="contact-form">
           <input class="form-controls" type="text" placeholder="Your Name" required>
           <input class="form-controls" type="email" placeholder="Your Email" required>
           <input class="form-controls" type="text" placeholder="Your Phone">
           <textarea class="form-controls" placeholder="Write your message" name="message" cols="30" rows="10"></textarea>
-          <input class="form-btn btn common-btn" type="submit" value="Send Message">
+          <input class="form-btn btn cta-btn" type="submit" value="Send Message">
         </form>
       </div>
-
       <div class="contact-details glass-card float-elevate">
-        <h1 class="greet-heading">My Contact Details</h1>
+        <h3 class="greet-heading">My Contact Details</h3>
         <div class="details">
           <h5 class="contact-heading">EMAIL</h5>
           <p class="contact-text">your.email@gmail.com</p>
@@ -172,39 +265,28 @@
         </div>
         <div class="details">
           <h5 class="contact-heading">LOCATION</h5>
-          <p class="contact-text">India</p>
+          <p class="contact-text">Kerala, India</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer section -->
+  <!-- Back to Home button -->
+  <button id="backToTop" class="back-top glass-card" aria-label="Back to Home">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
   <footer class="footer glass-card">
     <div class="footer-content text-center">
-      <h4>© 2025 All rights reserved | Your Name</h4>
+      <h4>© 2025 All rights reserved | VISWAJITH S</h4>
       <div class="social-links">
         <div class="footer-menu">
           <ul class="footer-menu-list">
-            <li class="footer-list-items">
-              <a class="footer-links" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="footer-list-items">
-              <a class="footer-links" href="https://github.com/your-username" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li class="footer-list-items">
-              <a class="footer-links" href="https://x.com/your-username" target="_blank" rel="noopener">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="footer-list-items">
-              <a class="footer-links" href="https://instagram.com/your-username" target="_blank" rel="noopener">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
+            <li class="footer-list-items"><a class="footer-links" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="footer-list-items"><a class="footer-links" href="https://github.com/your-username" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+            <li class="footer-list-items"><a class="footer-links" href="https://x.com/your-username" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+            <li class="footer-list-items"><a class="footer-links" href="https://instagram.com/your-username" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
@@ -213,6 +295,61 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    if (hamburger && menu) {
+      hamburger.addEventListener('click', function () {
+        const hamIcon = this.querySelector('.hamburger-icon');
+        const crossIcon = this.querySelector('.cross-icon');
+        const isOpen = menu.style.display === 'block';
+        menu.style.display = isOpen ? 'none' : 'block';
+        if (hamIcon) hamIcon.style.display = isOpen ? 'inline-block' : 'none';
+        if (crossIcon) crossIcon.style.display = isOpen ? 'none' : 'inline-block';
+      });
+
+      document.querySelectorAll('.links').forEach(link => {
+        link.addEventListener('click', () => {
+          const hamIcon = hamburger.querySelector('.hamburger-icon');
+          const crossIcon = hamburger.querySelector('.cross-icon');
+          menu.style.display = 'none';
+          if (hamIcon) hamIcon.style.display = 'inline-block';
+          if (crossIcon) crossIcon.style.display = 'none';
+        });
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Back to Home button
+    const backBtn = document.getElementById('backToTop');
+    const showAfter = 240; // px
+    function onScroll() {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (y > showAfter) {
+        backBtn.classList.add('show');
+      } else {
+        backBtn.classList.remove('show');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
 </html>
